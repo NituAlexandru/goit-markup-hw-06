@@ -288,51 +288,46 @@ body {
   outline: none;
 }
 
-/* ------------------------------------test------------------------- */
 .test {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 448px;
 }
-.test input {
-  width: 16px;
-  height: 16px;
-}
-.checkmark {
-  opacity: 0;
+.test .checkmark {
+  display: flex;
+  align-items: center;
   position: absolute;
-  margin-right: 8px;
-  top: 442px;
-  left: 54px;
-}
-.icon {
   width: 16px;
   height: 15px;
-  margin-right: 8px;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  margin-left: 13px;
+  margin-top: 14px;
+  opacity: 0;
+  cursor: pointer;
 }
-.checkmark:checked + .icon {
-  fill: var(--brand-color);
-  background-color: #2196f3;
-  background-image: url("./images/icons.svg#icon-not-checked");
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 13px;
+  margin-top: 14px;
 }
-.checkmark:checked + .icon::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-image: url("./images/icons.svg#icon-checked");
+.test .checkmark:checked + .icon {
+  background-image: url("../images/icon-check.svg");
 }
-
-/* --------------------------------------paragraf */
 .terms-paragraph {
   margin-top: 0;
-
   color: var(--text-color);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.42px;
+  padding-top: 10px;
+  margin-left: 12px;
 }
 
 .terms-paragraph span a {
